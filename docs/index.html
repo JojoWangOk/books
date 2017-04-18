@@ -14,7 +14,9 @@
   <div id="app"></div>
 </body>
 <script>
-
+  if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+  }
   window.$docsify = {
       loadSidebar: true,
       subMaxLevel: 2,
